@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-accent: #ff5da2;
+  --color-accent-dark: #b8236f;
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --accent: var(--color-accent);
+  --accent-dark: var(--color-accent-dark);
+}
+
+html,
+body {
+  height: 100%;
+  background: #000;
+  color: #fff;
+}
+
+.hero-bg {
+  background-image: url("/bg/scene-wide.png");
+}
+
+@media (orientation: portrait) {
+  .hero-bg {
+    background-image: url("/bg/scene-tall.png");
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
